@@ -25,6 +25,7 @@ Route::get('/album/show/{id}',"VkAlbum@Show")->where('id', '[0-9]+')->name("GetA
 
 Route::get('/album/download/{owner_id}/{album_id}',"VkAlbum@download");
 Route::get('/auth/login',"VkAuth@GetToken");
-Route::get('/test',function(\App\Providers\VkServiceProvider $custom){
-    echo $custom->login();
-});
+
+
+
+Route::get('/key',"BitrixKeyController@print");
